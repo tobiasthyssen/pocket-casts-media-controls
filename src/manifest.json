@@ -5,6 +5,10 @@
     "author": "Tobias Thyssen",
     "description": "Control Pocket Casts podcast webapp from anywhere!",
 
+    "icons": {
+    	"128": "icons/keyboard-128.png"
+    },
+
     "permissions": [
         "tabs",
         "https://play.pocketcasts.com/*"
