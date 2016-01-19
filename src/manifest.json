@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "Media controls for Pocket Casts",
-    "version": "1.0.0",
+    "name": "Media key support for Pocket Casts",
+    "version": "1.1.0",
     "author": "Tobias Thyssen",
-    "description": "Adds media controls functionality to Pocket Casts webapp",
+    "description": "Control Pocket Casts lovely webapp with your media keys",
 
     "permissions": [
         "tabs",
