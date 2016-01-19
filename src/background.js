@@ -3,24 +3,10 @@
     "use strict";
 
     chrome.commands.onCommand.addListener(function(command) {
-
-        switch (command) {
-            case "play-pause":
-                executeAction("play-pause");
-                break;
-            case "jump-forward":
-                executeAction("jump-forward");
-                break;
-            case "jump-back":
-                executeAction("jump-back");
-                break;
-            default:
-                console.log("No action registered with command: " + command)
-        }
-
+        sendCommand(command);
     });
 
-    function executeAction(action) {
+    function sendCommand(action) {
         chrome.tabs.query({
             "url": "https://play.pocketcasts.com/*",
         }, function(tabs) {

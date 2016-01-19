@@ -2,37 +2,25 @@
 
     "use strict";
 
+    // A map of which selector / element the command refers to
+    var buttons = {
+        "play-pause"   : ".play_pause_button",
+        "jump-forward" : ".skip_forward_button",
+        "jump-back"    : ".skip_back_button"
+    }
+
     chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
-        switch (request.action) {
-            case "play-pause":
-                playPause();
-                break;
-            case "jump-forward":
-                jumpForward();
-                break;
-            case "jump-back":
-                jumpBack();
-                break;
-            default:
-                console.log("No action registered with action: " + request.action);
-        }
+        executeCommand(request.action);
 
     });
 
-    function playPause() {
-        var btn = document.querySelector(".play_pause_button");
-        clickElement(btn);
-    }
+    function executeCommand(command) {
+        var btn = document.querySelector(buttons[command]);
 
-    function jumpForward() {
-        var btn = document.querySelector(".skip_forward_button");
-        clickElement(btn);
-    }
-
-    function jumpBack() {
-        var btn = document.querySelector(".skip_back_button");
-        clickElement(btn);
+        if (btn !== null && isVisible(btn)) {
+            clickElement(btn);
+        }
     }
 
     function clickElement(el) {
@@ -41,6 +29,10 @@
         } else if (el.click) {
            el.click();
         }
+    }
+
+    function isVisible(el) {
+        return el.offsetWidth > 0 && el.offsetHeight > 0;
     }
 
 }());

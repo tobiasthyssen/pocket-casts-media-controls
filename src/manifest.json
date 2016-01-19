@@ -5,10 +5,6 @@
     "author": "Tobias Thyssen",
     "description": "Adds media controls functionality to Pocket Casts webapp",
 
-    "icons": {
-
-    },
-
     "permissions": [
         "tabs",
         "https://play.pocketcasts.com/*"
