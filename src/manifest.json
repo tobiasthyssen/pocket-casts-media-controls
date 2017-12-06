@@ -1,13 +1,13 @@
 {
     "manifest_version": 2,
-    "name": "Media key support for Pocket Casts",
+    "name": "Media key support for Pocket Casts (with support for beta player)",
     "version": "1.2.0",
-    "author": "Tobias Thyssen, John Taylor",
+    "author": "Tobias Thyssen, John Taylor (Just added beta player support)",
     "description": "Control Pocket Casts podcast webapp from anywhere!",
 
     "icons": {
-    	"128": "icons/keyboard-128.png"
-    },
+            "128": "icons/keyboard-128.png"
+        },
 
     "permissions": [
         "tabs",
