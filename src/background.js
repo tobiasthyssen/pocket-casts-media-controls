@@ -13,6 +13,8 @@
             var tab = tabs[0];
             if (tab && tab.id) {
                 chrome.tabs.sendMessage(tab.id, { "action": action });
+            } else {
+                chrome.tabs.create({url: "https://play.pocketcasts.com", active: true});
             }
         });
     }
