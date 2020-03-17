@@ -1,13 +1,13 @@
 {
     "manifest_version": 2,
     "name": "Media key support for Pocket Casts",
-    "version": "1.1.0",
-    "author": "Tobias Thyssen",
+    "version": "1.2.2",
+    "author": "Tobias Thyssen, John Taylor (Active maintainer)",
     "description": "Control Pocket Casts podcast webapp from anywhere!",
 
     "icons": {
-    	"128": "icons/keyboard-128.png"
-    },
+            "128": "icons/keyboard-128.png"
+        },
 
     "permissions": [
         "tabs",
