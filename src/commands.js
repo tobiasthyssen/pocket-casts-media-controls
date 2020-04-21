@@ -6,7 +6,7 @@
     var buttons = {
         "play-pause"   : ".play_pause_button",
         "jump-forward" : ".skip_forward_button",
-        "jump-back"    : ".skip_back_button"
+        "jump-back"    : ".skip-back-button"
     }
 
     chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
